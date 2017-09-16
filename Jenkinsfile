@@ -4,7 +4,7 @@ pipeline {
         withEnv(['HOME=.']) 
         stage('build') {
             steps {
-                sh 'cd server-side/site/;sudo npm install'
+                sh 'cd server-side/site/;npm install'
             }
         }
     }
