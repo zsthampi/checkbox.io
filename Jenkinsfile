@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'cd server-side/site/;npm install'
+                sh 'cd server-side/site/;sudo npm install'
             }
         }
     }
