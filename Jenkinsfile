@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                withEnv(['HOME=.'])
-                sh 'cd server-side/site/;npm install'
+                withEnv(['HOME=.']) {
+                    sh 'cd server-side/site/;npm install'
+                }
             }
         }
     }
