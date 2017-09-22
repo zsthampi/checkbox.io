@@ -1,6 +1,6 @@
 server {
   listen 80;
-  root /var/lib/jenkins/workspace/checkbox/public_html/;
+  root $HOME/checkbox/public_html/;
   index index.html index.htm;
 
   location / {
