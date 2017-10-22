@@ -26,7 +26,7 @@ function getJsFiles(dir) {
 		var filePath = dir + "/" + file;
 		if(fs.statSync(filePath).isDirectory() && filePath.indexOf("node_modules/")==-1) {
 			getJsFiles(filePath);
-		} else if(file.endsWith(".js")) {
+		} else if(!fs.statSync(filePath).isDirectory() && file.endsWith(".js")) {
 			fileList.push(filePath);
 		}
 	});
